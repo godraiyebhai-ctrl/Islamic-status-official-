@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hadi Islamic Official | قرآن، حدیث اور اسلامی معلومات</title>
+
+  <meta name="description" content="Hadi Islamic Official پر قرآن کریم، احادیث، اسلامی مضامین، اسلامی ویڈیوز اور مستند اسلامی معلومات حاصل کریں۔">
+  <meta name="keywords" content="Hadi Islamic Official, Quran, Hadith, Islamic Articles, Islamic Videos, قرآن, حدیث, اسلامی مضامین">
+  <meta name="author" content="Hadi Islamic Official">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq",
+                   Arial, sans-serif;
+      background: #f5f8f6;
+      color: #1d2b25;
+      line-height: 1.9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      background: #0b5d4b;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .navbar {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #d8b65c;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #d8b65c;
+    }
+
+    .menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(4,55,44,0.82), rgba(4,55,44,0.90)),
+        radial-gradient(circle at center, #16836b, #063d30);
+    }
+
+    .hero-content {
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 65px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #e4c96a;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 19px;
+      color: #f1f7f4;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #d8b65c;
+      color: #18352d;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #0b5d4b;
+    }
+
+    /* Sections */
+    section {
+      padding: 75px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      color: #0b5d4b;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #66756f;
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+      border: 1px solid #e7eee9;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+    }
+
+    .icon {
+      width: 65px;
+      height: 65px;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e8f3ef;
+      color: #0b5d4b;
+      border-radius: 50%;
+      font-size: 28px;
+    }
+
+    .card h3 {
+      color: #164f41;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #697770;
+      font-size: 14px;
+    }
+
+    /* About */
+    .about {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-box p {
+      margin-bottom: 15px;
+      color: #52615a;
+      font-size: 16px;
+    }
+
+    /* Articles */
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .article {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .article-top {
+      height: 130px;
+      background: linear-gradient(135deg, #0b5d4b, #16836b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5cb6b;
+      font-size: 45px;
+    }
+
+    .article-content {
+      padding: 22px;
+    }
+
+    .article-content h3 {
+      color: #0b5d4b;
+      margin-bottom: 8px;
+    }
+
+    .article-content p {
+      color: #66756f;
+      font-size: 14px;
+    }
+
+    /* Videos */
+    .video-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      border-radius: 15px;
+      padding: 35px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .video-box .video-icon {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    /* Contact */
+    .contact {
+      background: white;
+    }
+
+    .contact-form {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #24463c;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid #d5e1db;
+      border-radius: 8px;
+      outline: none;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #0b5d4b;
+    }
+
+    .submit-btn {
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    /* FAQ */
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      margin-bottom: 12px;
+      border-radius: 9px;
+      padding: 15px 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #0b5d4b;
+    }
+
+    details p {
+      margin-top: 10px;
+      color: #64736d;
+    }
+
+    /* Legal */
+    .legal-box {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .legal-box h3 {
+      color: #0b5d4b;
+      margin: 20px 0 7px;
+    }
+
+    .legal-box h3:first-child {
+      margin-top: 0;
+    }
+
+    .legal-box p {
+      color: #596860;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      background: #073c31;
+      color: white;
+      padding: 45px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    footer h3 {
+      color: #e1c665;
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer li {
+      color: #c8d8d2;
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 7px;
+    }
+
+    footer a:hover {
+      color: #e1c665;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 18px;
+      color: #b9ccc5;
+      font-size: 13px;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .articles {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        min-height: 65px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        background: #0b5d4b;
+        flex-direction: column;
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 470px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="logo">
+        Hadi <span>Islamic Official</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">ہوم</a></li>
+        <li><a href="#quran">قرآن</a></li>
+        <li><a href="#hadith">حدیث</a></li>
+        <li><a href="#articles">مضامین</a></li>
+        <li><a href="#videos">ویڈیوز</a></li>
+        <li><a href="#about">ہمارے بارے میں</a></li>
+        <li><a href="#contact">رابطہ</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+
+      <h1>
+        Hadi <span>Islamic Official</span>
+      </h1>
+
+      <p>
+        قرآن کریم، احادیث مبارکہ، اسلامی مضامین اور اسلامی ویڈیوز
+        کے ذریعے مستند دینی معلومات حاصل کریں۔
+      </p>
+
+      <div class="buttons">
+        <a href="#quran" class="btn btn-primary">
+          قرآن کریم
+        </a>
+
+        <a href="#hadith" class="btn btn-outline">
+          احادیث مبارکہ
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORIES -->
+  <section id="quran">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>اسلامی مواد</h2>
+        <p>اپنی پسند کا دینی مواد منتخب کریں</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">📖</div>
+          <h3>قرآن کریم</h3>
+          <p>
+            قرآن کریم کی آیات، سورتیں اور قرآن سے متعلق مفید معلومات۔
+          </p>
+        </div>
+
+        <div class="card" id="hadith">
+          <div class="icon">🕌</div>
+          <h3>احادیث مبارکہ</h3>
+          <p>
+            رسول اللہ ﷺ کی احادیث اور ان سے حاصل ہونے والی اسلامی تعلیمات۔
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📝</div>
+          <h3>اسلامی مضامین</h3>
+          <p>
+            ایمان، اخلاق، عبادات اور اسلامی زندگی سے متعلق مفید مضامین۔
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">▶</div>
+          <h3>اسلامی ویڈیوز</h3>
+          <p>
+            اسلامی بیانات، قرآن و حدیث اور دینی معلومات پر مبنی ویڈیوز۔
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>ہمارے بارے میں</h2>
+        <p>Hadi Islamic Official</p>
+      </div>
+
+      <div class="about-box">
+
+        <p>
+          <strong>Hadi Islamic Official</strong> ایک اسلامی معلوماتی پلیٹ فارم ہے
+          جہاں قرآن کریم، احادیث مبارکہ، اسلامی مضامین اور اسلامی ویڈیوز
+          پیش کرنے کا مقصد دینی معلومات کو آسان اور خوبصورت انداز میں لوگوں تک پہنچانا ہے۔
+        </p>
+
+        <p>
+          ہمارا مقصد قرآن و سنت کی روشنی میں مفید اسلامی مواد پیش کرنا
+          اور نیکی، علم اور اچھے اخلاق کی ترغیب دینا ہے۔
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ARTICLES -->
+  <section id="articles">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>اسلامی مضامین</h2>
+        <p>دینی اور اصلاحی موضوعات</p>
+      </div>
+
+      <div class="articles">
+
+        <article class="article">
+          <div class="article-top">☪</div>
+          <div class="article-content">
+            <h3>اللہ کا ذکر</h3>
+            <p>
+              اللہ تعالیٰ کا ذکر دل کے اطمینان اور نیکی کی طرف رہنمائی کا ذریعہ ہے۔
+            </p>
+          </div>
+        </article>
+
+        <article class="article">
+          <div class="article-top">📖</div>
+          <div class="article-content">
+            <h3>قرآن سے تعلق</h3>
+            <p>
+              قرآن کریم کی تلاوت، سمجھ اور اس پر عمل ہماری زندگی کو بہتر بناتا ہے۔
+            </p>
+          </div>
+        </article>
+
+        <article class="article">
+          <div class="article-top">🤲</div>
+          <div class="article-content">
+            <h3>دعا کی اہمیت</h3>
+            <p>
+              دعا اللہ تعالیٰ سے تعلق مضبوط کرنے اور اپنی حاجات پیش کرنے کا ذریعہ ہے۔
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VIDEOS -->
+  <section id="videos">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>اسلامی ویڈیوز</h2>
+        <p>قرآن، حدیث اور اسلامی معلومات پر ویڈیوز</p>
+      </div>
+
+      <div class="video-box">
+
+        <div class="video-icon">▶️</div>
+
+        <h3>Hadi Islamic Official</h3>
+
+        <p>
+          ہماری اسلامی ویڈیوز دیکھنے کے لیے ہمارے YouTube چینل کو وزٹ کریں۔
+        </p>
+
+        <!-- یہاں اپنے YouTube چینل کا لنک لگائیں -->
+        <div class="buttons">
+          <a href="#" class="btn btn-primary">
+            YouTube چینل
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>رابطہ کریں</h2>
+        <p>ہم سے رابطہ کرنے کے لیے نیچے فارم استعمال کریں</p>
+      </div>
+
+      <form class="contact-form" onsubmit="sendMessage(event)">
+
+        <div class="form-group">
+          <label for="name">نام</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="اپنا نام لکھیں"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">ای میل</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="اپنی ای میل لکھیں"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="message">پیغام</label>
+          <textarea
+            id="message"
+            placeholder="اپنا پیغام لکھیں..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary submit-btn">
+          پیغام بھیجیں
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>اکثر پوچھے جانے والے سوالات</h2>
+      </div>
+
+      <div class="faq">
+
+        <details>
+          <summary>Hadi Islamic Official کیا ہے؟</summary>
+          <p>
+            یہ ایک اسلامی معلوماتی پلیٹ فارم ہے جہاں قرآن، حدیث،
+            اسلامی مضامین اور اسلامی ویڈیوز پیش کی جاتی ہیں۔
+          </p>
+        </details>
+
+        <details>
+          <summary>کیا ویب سائٹ کا مواد مفت ہے؟</summary>
+          <p>
+            ویب سائٹ پر موجود عمومی اسلامی مواد قارئین کے استفادے کے لیے پیش کیا جاتا ہے۔
+          </p>
+        </details>
+
+        <details>
+          <summary>کیا ہم آپ سے رابطہ کر سکتے ہیں؟</summary>
+          <p>
+            جی ہاں، Contact Us فارم کے ذریعے آپ اپنا پیغام بھیج سکتے ہیں۔
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- PRIVACY POLICY -->
+  <section id="privacy">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Privacy Policy</h2>
+      </div>
+
+      <div class="legal-box">
+
+        <h3>رازداری</h3>
+
+        <p>
+          Hadi Islamic Official اپنے صارفین کی رازداری کا احترام کرتا ہے۔
+          ہم کسی بھی ذاتی معلومات کو غیر ضروری طور پر استعمال یا شیئر کرنے سے گریز کرتے ہیں۔
+        </p>
+
+        <h3>رابطہ فارم</h3>
+
+        <p>
+          اگر آپ Contact Us فارم استعمال کرتے ہیں تو آپ کا نام، ای میل
+          اور پیغام صرف رابطے کے مقصد کے لیے استعمال کیا جا سکتا ہے۔
+        </p>
+
+        <h3>Third-Party Services</h3>
+
+        <p>
+          مستقبل میں ویب سائٹ پر YouTube، Google یا دیگر third-party services
+          استعمال کی جا سکتی ہیں۔ ان کی اپنی privacy policies ہو سکتی ہیں۔
+        </p>
+
+        <h3>Policy Updates</h3>
+
+        <p>
+          ضرورت کے مطابق اس Privacy Policy کو مستقبل میں اپ ڈیٹ کیا جا سکتا ہے۔
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TERMS -->
+  <section id="terms">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Terms & Conditions</h2>
+      </div>
+
+      <div class="legal-box">
+
+        <h3>ویب سائٹ کا استعمال</h3>
+
+        <p>
+          اس ویب سائٹ کو استعمال کرتے ہوئے صارف کو قابل اطلاق قوانین
+          اور دوسروں کے حقوق کا احترام کرنا ہوگا۔
+        </p>
+
+        <h3>مواد</h3>
+
+        <p>
+          ویب سائٹ پر موجود مواد عمومی اسلامی معلومات اور تعلیمی مقصد کے لیے ہے۔
+          اہم دینی مسائل میں مستند علماء سے رجوع کرنا بہتر ہے۔
+        </p>
+
+        <h3>تبدیلیاں</h3>
+
+        <p>
+          ویب سائٹ کے مواد، صفحات یا خصوصیات میں ضرورت کے مطابق تبدیلی کی جا سکتی ہے۔
+        </p>
